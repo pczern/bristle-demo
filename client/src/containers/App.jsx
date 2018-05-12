@@ -3,9 +3,14 @@ import React, { Component } from 'react'
 import Intro from '../intro/Intro'
 
 class App extends Component {
-  state = {
-    isLoading: true,
+  constructor() {
+    super()
+
+    this.state = {
+      isLoading: true,
+    }
   }
+
   render() {
     if (this.state.isLoading) {
       setTimeout(() => {

@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
-// Home
+// styles
 
 class Intro extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
   render() {
     return (
-      <div>
-        <h3>Meet Bristle</h3>
-        <p>the intelligent assignment creator</p>
-        <a>Begin Demo</a>
+      <div className="intro__container">
+        <div className="intro__guide">
+          <h3>Intro</h3>
+        </div>
       </div>
     )
   }
