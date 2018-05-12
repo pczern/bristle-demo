@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // Intro
-import Intro from '../intro/Intro'
+import Intro from '../intro'
 
 class App extends Component {
   constructor() {
