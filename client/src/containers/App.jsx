@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+// Intro
+import Intro from '../intro/Intro'
 
 class App extends Component {
   state = {
-    isLoading: true
+    isLoading: true,
   }
   render() {
     if (this.state.isLoading) {
@@ -12,7 +14,11 @@ class App extends Component {
       return null
     }
 
-    return <div className="App">Hallo Welt</div>
+    return (
+      <div className="App">
+        <Intro />
+      </div>
+    )
   }
 }
 

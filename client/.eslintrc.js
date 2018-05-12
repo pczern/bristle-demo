@@ -21,5 +21,9 @@ module.exports = {
     css: false
   },
   parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier']
+  extends: ['airbnb'],
+  rules: {
+    'linebreak-style': 0,
+    "semi": 0,
+  }
 };
