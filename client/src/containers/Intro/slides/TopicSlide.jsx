@@ -1,5 +1,5 @@
 import React from 'react'
-import Slide from '../components/Slide'
+import Slide from '../../../components/Slide'
 
 const StartSlide = () => (
   <Slide>

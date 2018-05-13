@@ -1,22 +1,16 @@
 import React, { Component } from 'react'
 // Intro
-import Intro from '../intro'
+import Intro from './Intro'
+import Assignment from './Assignment'
 
 class App extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      isLoading: true,
-    }
+  state = {
+    introFinished: false,
   }
 
   render() {
-    if (this.state.isLoading) {
-      setTimeout(() => {
-        this.setState({ isLoading: false })
-      }, 100)
-      return null
+    if (this.state.introFinished) {
+      return <Assignment />
     }
 
     return (

@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['stylelint-config-standard'],
   rules: {
+    'no-missing-end-of-source-newline': false,
     'at-rule-no-unknown': [
       true,
       {
