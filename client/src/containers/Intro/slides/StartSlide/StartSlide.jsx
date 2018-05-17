@@ -3,10 +3,11 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { nextSlide } from '../../../../actions'
 import css from './index.scss'
+import { panelGuide } from '../../index.scss'
 
 const StartSlide = props => (
   <div className={css.StartSlide}>
-    <div className={css.StartSlide__info}>
+    <div className={panelGuide}>
       <h2 className={css.StartSlide__header}>Meet Bristle</h2>
       <p className={css.StartSlide__subhead}>Create intelligent classroom assignments</p>
       <button

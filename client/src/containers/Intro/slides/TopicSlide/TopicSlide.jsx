@@ -1,15 +1,32 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { nextSlide } from '../../../../actions'
 import Slide from '../../../../components/Slide'
 import css from './index.scss'
 // Universal slide styles
-import { leftPanel, rightPanel } from '../../index.scss'
+import { leftPanel, rightPanel, panelGuide } from '../../index.scss'
 
-const StartSlide = () => (
+const TopicSlide = props => (
   <Slide className={css.TopicSlide__modifier}>
     <div className={leftPanel}>
-      <h3 className={css.TopicSlide}>asdasd</h3>
+      <div className={panelGuide}>
+        <h2 className={css.topicInfo__header}>
+          Begin by selecting <i>Polynomials and Nonlinear Functions</i> as your topic.
+        </h2>
+        <button
+          className={css.StartSlide__button}
+          onClick={() => props.dispatch(nextSlide())}
+        >Continue
+        </button>
+      </div>
     </div>
     <div className={rightPanel} />
   </Slide>
 )
-export default StartSlide
+
+TopicSlide.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+}
+
+export default connect()(TopicSlide)
