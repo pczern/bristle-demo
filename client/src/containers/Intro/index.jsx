@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 // Slides
-import StartSlide from './slides/StartSlide'
-import TopicSlide from './slides/TopicSlide'
+import StartSlide from './slides/StartSlide/StartSlide'
+import TopicSlide from './slides/TopicSlide/TopicSlide'
 import TimeSlide from './slides/TimeSlide'
 import css from './index.scss'
 
@@ -18,9 +18,9 @@ class Intro extends Component {
 
   getCurrentSlide = (id) => {
     switch (id) {
-      case 0:
+      case 1: // Change to 0
         return <StartSlide />
-      case 1:
+      case 0: // Change to 1
         return <TopicSlide />
       case 2:
         return <TimeSlide />

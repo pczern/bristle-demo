@@ -1,0 +1,11 @@
+.TopicSlide__modifier {
+  background: #c0c0aa;  /* fallback for old browsers */
+  background: linear-gradient(to right, #1cefff, #c0c0aa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.TopicSlide {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
