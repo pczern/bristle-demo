@@ -11,9 +11,37 @@
 }
 
 .topicInfo__header {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.topInfo__continue {
   color: white;
 }
 
-.topicInfo__subhead {
-  color: white;
+.TopicSlide__topic {
+  padding: 0 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.TopicSlide__topic_header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.TopicSlide__topic_list {
+  text-align: center;
+}
+
+.TopicSlide__topic_list li {
+  color: #2d3436;
+  margin: 6px 6px;
+  padding: 10px 16px;
+  display: inline-block;
+  border: 1px solid #2d3436;
+  border-radius: 20px;
 }
