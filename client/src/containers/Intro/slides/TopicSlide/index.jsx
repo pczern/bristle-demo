@@ -59,14 +59,14 @@ class TopicSlide extends React.Component {
 
   render() {
     return (
-      <Slide className={css.TopicSlide__modifier}>
+      <Slide className={css.topicslide}>
         <div className={leftPanel}>
           <div className={panelGuide}>
-            <h2 className={css.topicInfo__header}>
+            <h2 className={css.topicslide__info__header}>
               Begin by selecting <i>Factoring and Polynomials</i> as your topic.
             </h2>
             <button
-              className={css.topInfo__continue}
+              className={css.topicslide__info__continue}
               onClick={() => this.props.dispatch(nextSlide())}
             >
               Continue
@@ -74,9 +74,9 @@ class TopicSlide extends React.Component {
           </div>
         </div>
         <div className={rightPanel}>
-          <div className={css.TopicSlide__topic}>
-            <h3 className={css.TopicSlide__topic_header}>Algebra 1 Topics</h3>
-            <ul className={css.TopicSlide__topic_list}>
+          <div className={css.topicslide__topics}>
+            <h3 className={css.topicslide__topics__header}>Algebra 1 Topics</h3>
+            <ul className={css.topicslide__topics__list}>
               {this.state.topics.data.map(topic => (
                 <li key={topic.id}>
                   <Topic

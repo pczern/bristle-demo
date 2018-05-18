@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 // Slides
-import StartSlide from './slides/StartSlide/StartSlide'
-import TopicSlide from './slides/TopicSlide/TopicSlide'
+import StartSlide from './slides/StartSlide'
+import TopicSlide from './slides/TopicSlide'
 import TimeSlide from './slides/TimeSlide'
 import css from './index.scss'
 
@@ -30,11 +30,7 @@ class Intro extends Component {
   }
 
   render() {
-    return (
-      <div className={css.intro}>
-        { this.getCurrentSlide(this.props.currentSlide) }
-      </div>
-    )
+    return <div className={css.intro}>{this.getCurrentSlide(this.props.currentSlide)}</div>
   }
 }
 
