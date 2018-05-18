@@ -27,6 +27,13 @@ body {
   line-height: 1;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  -webkit-font-smoothing: antialiased;
+}
+
 ol,
 ul {
   list-style: none;
@@ -48,4 +55,8 @@ q::after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button:hover {
+  cursor: pointer;
 }
