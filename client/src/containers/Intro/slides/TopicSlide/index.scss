@@ -1,22 +1,22 @@
-.TopicSlide__modifier {
+.topicslide {
   background-color: #31d8a9;
 }
 
-.TopicSlide {
+.topicslide__guide {
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.topicInfo__header {
-  margin-bottom: 20px;
+.topicslide__info__header {
+  margin-bottom: 40px;
   color: white;
   font-size: 20px;
   font-weight: 300;
 }
 
-.topInfo__continue {
+.topicslide__info__continue {
   padding: 10px 20px;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -26,7 +26,7 @@
   font-size: 12px;
 }
 
-.TopicSlide__topic {
+.topicslide__topics {
   padding: 0 20px;
   position: relative;
   top: 50%;
@@ -34,7 +34,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.TopicSlide__topic_header {
+.topicslide__topics__header {
   text-align: center;
   margin-bottom: 20px;
   font-size: 18px;
@@ -42,10 +42,10 @@
   color: #7e9292;
 }
 
-.TopicSlide__topic_list {
+.topicslide__topics__list {
   text-align: center;
 }
 
-.TopicSlide__topic_list li {
+.topicslide__topics__list li {
   display: inline;
 }

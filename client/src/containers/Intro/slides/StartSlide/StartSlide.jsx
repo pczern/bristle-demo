@@ -6,12 +6,12 @@ import css from './index.scss'
 import { panelGuide } from '../../index.scss'
 
 const StartSlide = props => (
-  <div className={css.StartSlide}>
+  <div className={css.startslide}>
     <div className={panelGuide}>
-      <h2 className={css.StartSlide__header}>Meet Bristle</h2>
-      <p className={css.StartSlide__subhead}>Create intelligent classroom assignments</p>
+      <h2 className={css.startslide__header}>Meet Bristle</h2>
+      <p className={css.startslide__subhead}>Create intelligent classroom assignments</p>
       <button
-        className={css.StartSlide__button}
+        className={css.startslide__button}
         onClick={() => props.dispatch(nextSlide())}
       >Create Assignment
       </button>

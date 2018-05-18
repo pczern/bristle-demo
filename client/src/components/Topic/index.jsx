@@ -4,9 +4,9 @@ import css from './index.scss'
 
 const Topic = (props) => {
   if (props.topicSelected) {
-    return <button className={css.Topic__active}>{props.children}</button>
+    return <button className={css['topic--active']}>{props.children}</button>
   }
-  return <button className={css.Topic}>{props.children}</button>
+  return <button className={css.topic}>{props.children}</button>
 }
 
 Topic.propTypes = {
