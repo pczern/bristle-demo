@@ -1,4 +1,4 @@
-.Topic {
+.topic {
   color: #737575;
   margin: 6px 6px;
   padding: 10px 16px;
@@ -8,7 +8,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.Topic__active {
+.topic--selected {
   color: #fff;
   background-color: #31d8a9;
   margin: 6px 6px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import update from 'immutability-helper'
 import { nextSlide } from '../../../../actions'
 import Slide from '../../../../components/Slide'
 import Topic from '../../../../components/Topic'
@@ -13,30 +14,47 @@ class TopicSlide extends React.Component {
     super(props)
 
     this.state = {
-      topicSelected: false,
-      topics: [
-        'Expressions, equations and functions',
-        'Real numbers',
-        'Solving linear equations',
-        'Linear functions',
-        'Factoring and polynomials',
-        'Linear equations',
-        'Linear inequalitites',
-        'Systems of linear equations and inequalities',
-        'Exponents and exponential functions',
-        'Quadratic equations',
-        'Radical expressions',
-        'Rational expressions',
-      ],
+      topics: {
+        data: [
+          { id: 0, name: 'Expressions, equations and functions' },
+          { id: 1, name: 'Real numbers' },
+          { id: 2, name: 'Solving linear equations' },
+          { id: 3, name: 'Linear functions' },
+          { id: 4, name: 'Factoring and polynomials' },
+          { id: 5, name: 'Linear equations' },
+          { id: 6, name: 'Linear inequalitites' },
+          { id: 7, name: 'Systems of linear equations and inequalities' },
+          { id: 8, name: 'Exponents and exponential functions' },
+          { id: 9, name: 'Quadratic equations' },
+          { id: 10, name: 'Radical expressions' },
+          { id: 11, name: 'Rational expressions' },
+        ],
+        maxSelectable: 3,
+        currentlySelected: 0, // count of how many are selected
+      },
     }
   }
 
-  selectTopic = () => {
-    if (this.state.topicSelected) {
-      this.setState({ topicSelected: false })
-    } else {
-      this.setState({ topicSelected: true })
+  selectTopic = (id) => {
+    if (this.state.topics.currentlySelected < this.state.topics.maxSelectable) {
+      this.setState((state) => {
+        const newTopics = update(state.topics, {
+          data: { [id]: { selected: { $set: true } } },
+        })
+        newTopics.currentlySelected = state.topics.currentlySelected + 1
+        return { topics: newTopics }
+      })
     }
+  }
+
+  unselectTopic = (id) => {
+    this.setState((state) => {
+      const newTopics = update(state.topics, {
+        data: { [id]: { selected: { $set: false } } },
+      })
+      newTopics.currentlySelected = state.topics.currentlySelected - 1
+      return { topics: newTopics }
+    })
   }
 
   render() {
@@ -50,7 +68,8 @@ class TopicSlide extends React.Component {
             <button
               className={css.topInfo__continue}
               onClick={() => this.props.dispatch(nextSlide())}
-            >Continue
+            >
+              Continue
             </button>
           </div>
         </div>
@@ -58,12 +77,15 @@ class TopicSlide extends React.Component {
           <div className={css.TopicSlide__topic}>
             <h3 className={css.TopicSlide__topic_header}>Algebra 1 Topics</h3>
             <ul className={css.TopicSlide__topic_list}>
-              {this.state.topics.map(topic => (
-                <li key={`${topic}1`}>
+              {this.state.topics.data.map(topic => (
+                <li key={topic.id}>
                   <Topic
-                    topicSelected={this.state.topicSelected}
-                    onClick={this.selectTopic}
-                  >{topic}
+                    id={topic.id}
+                    selected={!!topic.selected}
+                    onSelect={this.selectTopic}
+                    onUnselect={this.unselectTopic}
+                  >
+                    {topic.name}
                   </Topic>
                 </li>
               ))}
