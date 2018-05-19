@@ -17,7 +17,6 @@ class Topic extends React.Component {
     onUnselect: () => null,
   }
   handleOnClick = () => {
-    console.log('what')
     if (!this.props.selected) this.props.onSelect(this.props.id)
     else this.props.onUnselect(this.props.id)
   }

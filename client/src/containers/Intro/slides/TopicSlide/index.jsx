@@ -29,7 +29,7 @@ class TopicSlide extends React.Component {
           { id: 10, name: 'Radical expressions' },
           { id: 11, name: 'Rational expressions' },
         ],
-        maxSelectable: 3,
+        maxSelectable: 1,
         currentlySelected: 0, // count of how many are selected
       },
     }
@@ -65,12 +65,17 @@ class TopicSlide extends React.Component {
             <h2 className={css.topicslide__info__header}>
               Begin by selecting <i>Factoring and Polynomials</i> as your topic.
             </h2>
-            <button
-              className={css.topicslide__info__continue}
-              onClick={() => this.props.dispatch(nextSlide())}
-            >
-              Continue
-            </button>
+            {
+              this.state.currentlySelected >= 1
+              && (
+                <button
+                  className={css.topicslide__info__continue}
+                  onClick={() => this.props.dispatch(nextSlide())}
+                >
+                  Continue
+                </button>
+              )
+            }
           </div>
         </div>
         <div className={rightPanel}>
