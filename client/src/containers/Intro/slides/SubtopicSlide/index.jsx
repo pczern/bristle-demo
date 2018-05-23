@@ -9,31 +9,23 @@ import css from './index.scss'
 // Universal slide styles
 import { leftPanel, rightPanel, panelGuide } from '../../index.scss'
 
-class TopicSlide extends React.Component {
+class SubtopicSlide extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       topics: {
         data: [
-          { id: 0, name: 'Solving Equations', highlight: false },
-          { id: 1, name: 'Solving Inequalities', highlight: false },
-          { id: 2, name: 'Working with Units', highlight: false },
-          { id: 3, name: 'Linear Equations & Graphs', highlight: false },
-          { id: 4, name: 'Functions', highlight: false },
-          { id: 5, name: 'Linear Word Problems', highlight: false },
-          { id: 6, name: 'Sequences', highlight: false },
-          { id: 7, name: 'Systems of Equations', highlight: false },
-          { id: 8, name: 'Inequalities (Systems & Graphs)', highlight: false },
-          { id: 9, name: 'Absolute Value & Piecewise Functions', highlight: false },
-          { id: 10, name: 'Rational Exponents & Radicals', highlight: false },
-          { id: 11, name: 'Exponential Growth & Decay', highlight: false },
-          { id: 12, name: 'Polynomials', highlight: true },
-          { id: 13, name: 'Factorization', highlight: false },
-          { id: 14, name: 'Quadratics', highlight: false },
-          { id: 15, name: 'Irrational Numbers', highlight: false },
+          { id: 0, name: 'Adding & Subtracting Polynomials', highlight: true },
+          { id: 1, name: 'Adding and Subtracting Polynomials: Two Variables', highlight: false },
+          { id: 2, name: 'Multiplying Monomials', highlight: false },
+          { id: 3, name: 'Multiplying Monomials by Polynomials', highlight: true },
+          { id: 4, name: 'Multiplying Binomials', highlight: false },
+          { id: 5, name: 'Multiplying Binomials by Polynomials', highlight: false },
+          { id: 6, name: 'Special Products of Binomials', highlight: true },
+          { id: 7, name: 'Polynomials Word Problems', highlight: false },
         ],
-        maxSelectable: 1,
+        maxSelectable: 3,
         currentlySelected: 0, // count of how many are selected
       },
     }
@@ -63,17 +55,18 @@ class TopicSlide extends React.Component {
 
   render() {
     return (
-      <Slide className={css.topicslide}>
+      <Slide className={css.subtopicslide}>
         <div className={leftPanel}>
           <div className={panelGuide}>
-            <h2 className={css.topicslide__info__header}>
-              Begin by selecting the highlighted topic.
+            <h2 className={css.subtopicslide__info__header}>
+              You may want only certain concepts to be practiced by your students,
+              so let’s select the highlighted subtopics.
             </h2>
             {
-              this.state.topics.currentlySelected >= 1
+              this.state.topics.currentlySelected >= 3
               && (
                 <button
-                  className={css.topicslide__info__continue}
+                  className={css.subtopicslide__info__continue}
                   onClick={() => this.props.dispatch(nextSlide())}
                 >
                   Continue
@@ -83,9 +76,11 @@ class TopicSlide extends React.Component {
           </div>
         </div>
         <div className={rightPanel}>
-          <div className={css.topicslide__topics}>
-            <h3 className={css.topicslide__topics__header}>Algebra 1 Topics</h3>
-            <ul className={css.topicslide__topics__list}>
+          <div className={css.subtopicslide__topics}>
+            <h3 className={css.subtopicslide__topics__header}>
+              Polynomials Subtopics
+            </h3>
+            <ul className={css.subtopicslide__topics__list}>
               {this.state.topics.data.map(topic => (
                 <li key={topic.id}>
                   <Topic
@@ -107,8 +102,8 @@ class TopicSlide extends React.Component {
   }
 }
 
-TopicSlide.propTypes = {
+SubtopicSlide.propTypes = {
   dispatch: PropTypes.func.isRequired,
 }
 
-export default connect()(TopicSlide)
+export default connect()(SubtopicSlide)

@@ -10,6 +10,7 @@ class Topic extends React.Component {
     onSelect: PropTypes.func,
     onUnselect: PropTypes.func,
     id: PropTypes.number.isRequired,
+    highlight: PropTypes.bool.isRequired,
   }
 
   static defaultProps = {
@@ -23,6 +24,7 @@ class Topic extends React.Component {
   render() {
     const classes = classNames(css.topic, {
       [css['topic--selected']]: this.props.selected,
+      [css['topic--highlight']]: this.props.highlight,
     })
 
     return (

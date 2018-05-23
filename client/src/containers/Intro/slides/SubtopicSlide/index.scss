@@ -1,22 +1,22 @@
-.topicslide {
+.subtopicslide {
   background-color: #31d8a9;
 }
 
-.topicslide__guide {
+.subtopicslide__guide {
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.topicslide__info__header {
+.subtopicslide__info__header {
   margin-bottom: 40px;
   color: white;
   font-size: 20px;
   font-weight: 300;
 }
 
-.topicslide__info__continue {
+.subtopicslide__info__continue {
   padding: 10px 20px;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -26,7 +26,7 @@
   font-size: 12px;
 }
 
-.topicslide__topics {
+.subtopicslide__topics {
   padding: 0 30px;
   position: relative;
   top: 50%;
@@ -34,7 +34,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.topicslide__topics__header {
+.subtopicslide__topics__header {
   text-align: center;
   margin-bottom: 20px;
   font-size: 18px;
@@ -42,11 +42,15 @@
   color: #7e9292;
 }
 
-.topicslide__topics__list {
+.subtopicslide__topics__list {
   text-align: left;
+  font-size: 14px;
 }
 
-.topicslide__topics__list li {
+.subtopicslide__topics__list li {
   display: inline;
-  font-size: 14px;
+}
+
+.subtopicslide__topics__list--highlight {
+  box-shadow: 0 1px 3px rgba(49, 216, 169, 0.12), 0 1px 2px rgba(49, 216, 169, 0.24);
 }
