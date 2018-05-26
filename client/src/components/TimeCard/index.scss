@@ -1,0 +1,28 @@
+.topic {
+  color: #737575;
+  margin: 6px 6px;
+  padding: 10px 16px;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+  -webkit-font-smoothing: antialiased;
+}
+
+.timecard--selected {
+  color: #fff;
+  background-color: #31d8a9;
+  margin: 6px 6px;
+  padding: 10px 16px;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+  -webkit-font-smoothing: antialiased;
+}
+
+.timecard--highlight {
+  color: #31d8a9;
+}
+
+.timecard--selected.timecard--highlight {
+  color: #fff;
+}

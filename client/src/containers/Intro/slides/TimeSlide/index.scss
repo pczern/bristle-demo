@@ -1,22 +1,22 @@
-.subtopicslide {
+.timeslide {
   background-color: #31d8a9;
 }
 
-.subtopicslide__guide {
+.timeslide__guide {
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.subtopicslide__info__header {
+.timeslide__info__header {
   margin-bottom: 40px;
   color: white;
   font-size: 20px;
   font-weight: 300;
 }
 
-.subtopicslide__info__continue {
+.timeslide__info__continue {
   padding: 10px 20px;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -26,7 +26,7 @@
   font-size: 12px;
 }
 
-.subtopicslide__topics {
+.timeslide__times {
   padding: 0 30px;
   position: relative;
   top: 50%;
@@ -34,7 +34,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.subtopicslide__topics__header {
+.timeslide__times__header {
   text-align: center;
   margin-bottom: 20px;
   font-size: 18px;
@@ -42,15 +42,15 @@
   color: #7e9292;
 }
 
-.subtopicslide__topics__list {
-  text-align: left;
+.timeslide__times__list {
+  text-align: center;
   font-size: 14px;
 }
 
-.subtopicslide__topics__list li {
+.timeslide__times__list li {
   display: inline;
 }
 
-.subtopicslide__topics__list--highlight {
+.timeslide__times__list--highlight {
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
 }

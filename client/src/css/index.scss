@@ -83,6 +83,10 @@ table {
   letter-spacing: 1px;
 }
 
+button {
+  background: #fff; /* remote after creating global styles for buttons */
+}
+
 button:hover {
   cursor: pointer;
 }

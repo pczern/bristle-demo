@@ -59,7 +59,7 @@ class SubtopicSlide extends React.Component {
         <div className={leftPanel}>
           <div className={panelGuide}>
             <h2 className={css.subtopicslide__info__header}>
-              You may want only certain concepts to be practiced by your students,
+              You may only want certain concepts to be practiced by your students,
               so let’s select the highlighted subtopics.
             </h2>
             {
