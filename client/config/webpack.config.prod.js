@@ -210,7 +210,7 @@ module.exports = {
           },
           {
             test: [/\.css$/, /\.scss$/],
-            include: paths.appSrc,
+            include: [paths.appSrc],
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -225,6 +225,9 @@ module.exports = {
                       loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
+                        modules: true,
+                        sourceMap: false,
+                        import: false,
                         minimize: true,
                         sourceMap: shouldUseSourceMap
                       }
