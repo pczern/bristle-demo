@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://pczern.github.io/bristle-demo",
+  "homepage": "https://pczern.github.io/bristle-demo",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -63,6 +63,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -98,5 +100,8 @@
       "node",
       "mjs"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
   }
 }
